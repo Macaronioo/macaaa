@@ -110,47 +110,7 @@ editor.addEventListener("keyup", function(e){
     }
 });
 
-editor.addEventListener("keyup", function(e){
 
-    // 偵測輸入 =
-    if(e.key === "="){
-
-        let lines = editor.value.split("\n");
-
-        // 取得最後一行
-        let currentLineIndex = lines.length - 1;
-        let currentLine = lines[currentLineIndex];
-
-        // 避免重複計算
-        if(currentLine.includes("=")){
-            
-            let parts = currentLine.split("=");
-
-            // 左邊公式
-            let expression = parts[0].trim();
-
-            // 如果右邊已有結果就不處理
-            if(parts[1].trim() === ""){
-
-                try{
-                    let result = eval(expression);
-
-                    // 限制小數位
-                    result = parseFloat(result.toFixed(10));
-
-                    // 補上結果
-                    lines[currentLineIndex] = expression + "=" + result;
-
-                    editor.value = lines.join("\n");
-                }
-                catch(err){
-                    lines[currentLineIndex] = expression + "=錯誤";
-                    editor.value = lines.join("\n");
-                }
-            }
-        }
-    }
-});
 </script>
 
 </body>
