@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工具箱</title>
+
+<style>
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#f5f7fa,#e4ecf7);
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+    font-size:14px;
+}
+
+/* 卡片區 */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+/* 工具卡片 */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    text-decoration:none;
+    color:#333;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    transition:0.2s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.12);
+}
+
+.icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.desc{
+    font-size:12px;
+    color:#777;
+    margin-top:5px;
+    text-align:center;
+}
+
+/* 手機優化 */
+@media (max-width:500px){
+    h1{font-size:22px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>工具箱</h1>
+   
+    <div class="grid">
+
+        <a class="card" href="calculator/">
+            <div class="icon">🧮</div>
+            <div class="title">計算器</div>
+        </a>
+
+        <a class="card" href="commission/">
+            <div class="icon">💰</div>
+            <div class="title">佣金計算</div>
+        </a>
+
+        <a class="card" href="area/">
+            <div class="icon">📐</div>
+            <div class="title">坪數換算</div>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
