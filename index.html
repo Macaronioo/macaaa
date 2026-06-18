@@ -20,37 +20,32 @@ body{
 
 h1{
     text-align:center;
-    margin-bottom:10px;
-    font-size:28px;
+    margin-bottom:8px;
 }
 
 .subtitle{
     text-align:center;
     color:#666;
-    margin-bottom:30px;
+    margin-bottom:25px;
     font-size:14px;
 }
 
-/* 卡片區 */
+/* 卡片 */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:15px;
 }
 
-/* 工具卡片 */
 .card{
     background:white;
-    padding:20px;
+    padding:18px;
     border-radius:14px;
     text-decoration:none;
     color:#333;
     box-shadow:0 4px 10px rgba(0,0,0,0.08);
     transition:0.2s;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display:block;
 }
 
 .card:hover{
@@ -59,25 +54,32 @@ h1{
 }
 
 .icon{
-    font-size:28px;
+    font-size:26px;
     margin-bottom:10px;
 }
 
 .title{
     font-size:16px;
     font-weight:bold;
+    margin-bottom:6px;
+}
+
+.path{
+    font-size:12px;
+    color:#999;
+    margin-bottom:6px;
 }
 
 .desc{
-    font-size:12px;
-    color:#777;
-    margin-top:5px;
-    text-align:center;
+    font-size:13px;
+    color:#666;
 }
 
-/* 手機優化 */
+/* 手機 */
 @media (max-width:500px){
-    h1{font-size:22px;}
+    .grid{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
@@ -87,22 +89,29 @@ h1{
 <div class="container">
 
     <h1>工具箱</h1>
-   
+    <div class="subtitle">常用計算工具集合</div>
+
     <div class="grid">
 
-        <a class="card" href="calculator/">
+        <a class="card" href="./calculator/">
             <div class="icon">🧮</div>
             <div class="title">計算器</div>
+            <div class="path">/calculator/index.html</div>
+            <div class="desc">多行公式計算 + 歷史紀錄</div>
         </a>
 
-        <a class="card" href="commission/">
+        <a class="card" href="./commission/">
             <div class="icon">💰</div>
-            <div class="title">佣金計算</div>
+            <div class="title">拆分計算</div>
+            <div class="path">/commission/index.html</div>
+            <div class="desc">業績抽成與多人拆帳</div>
         </a>
 
-        <a class="card" href="area/">
+        <a class="card" href="./area/">
             <div class="icon">📐</div>
             <div class="title">坪數換算</div>
+            <div class="path">/area/index.html</div>
+            <div class="desc">坪 ↔ 平方公尺快速換算</div>
         </a>
 
     </div>
